@@ -38,6 +38,8 @@ ruby <skill-dir>/scripts/prepare.rb --template 01-task.yml --answers <draft-dir>
 
 ## 标签与权限
 
+- 创建或评论前，读取实际提交身份的 GitHub 数字 ID，检查默认分支 `participants/<数字ID>.json` 中的登记。尚未登记时保留草稿，指向 `participants/README.md` 的 Fork 与注册 PR 流程。使用连接工具与 CLI 时分别确认实际提交账号，避免混用身份。
+
 - 新建时使用模板声明的默认标签。项目下拉选项进入正文，项目标签由维护者确认后添加。
 - 难度选择表示建议。导师确认任务难度、维护者设置 `difficulty/level0` 至 `difficulty/level4` 的要求以当前文档为准；创建操作只携带模板默认标签。
 - Assignee 在导师确认任务申领后设置。创建时不推断负责人、导师授权、Milestone 或额外标签。

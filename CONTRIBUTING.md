@@ -3,6 +3,12 @@
 
 # 贡献指南
 
+## 注册参与
+
+先按[参与者注册说明](participants/README.md) Fork 仓库，提交仅包含本人 GitHub 身份文件的 PR。维护者审核合并后，可以创建 Issue 和发表评论。注册属于参与前置条件，贡献者等级按实践成果评估。
+
+未注册账号创建或重新打开的 Issue 会自动关闭，其新建或编辑的 Issue 评论会自动删除。PR 讨论用于注册沟通，保持开放。自动处理在提交后执行，内容可能短暂可见。
+
 ## 提出任务
 
 通过[新建 Issue](https://github.com/processmission/mission-forge/issues/new/choose) 选择实践任务提议、问题报告、改进建议或参与求助表单。提出实践任务时填写以下信息：

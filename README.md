@@ -76,14 +76,23 @@ Choose a project and build experience through practical contributions.
 
 ## Start contributing
 
-1. **Understand the program.** Read the [participation guidelines](docs/program.md)
-   and [contribution guide](CONTRIBUTING.md).
-2. **Choose a project.** Explore the project guides and review the
+1. **Register through a PR.** Fork this repository, add your GitHub identity
+   file under [`participants/`](participants/README.md), and submit a registration
+   PR. Participation starts after maintainer review and merge.
+2. **Choose a project.** Read the [participation guidelines](docs/program.md),
+   explore the project guides and review the
    [Program 2026](programs/2026/README.md).
-3. **Agree on a task.** Propose a task or request to join a published task through
-   a repository Issue. Confirm its scope and acceptance criteria with a mentor.
+3. **Claim a task.** Find an open `kind/task` Issue by project and difficulty.
+   Comment with your experience, availability and development environment.
+   After mentor confirmation, a maintainer assigns the Issue to you and records
+   the agreed scope and goals. See the [claiming guide](CONTRIBUTING.md#申领任务).
 4. **Build and share evidence.** Complete the work, record actual validation
    results, and link upstream submissions for review and assessment.
+
+Unregistered accounts' issues are automatically closed and their issue comments
+are automatically deleted. PR discussions remain open. Processing occurs after
+submission, so content may briefly be visible. Registration is a participation
+prerequisite; contributor levels are assessed through task outcomes.
 
 **2026 status:** Recruitment has yet to be announced. Dates, mentors, available
 tasks, and incentives will be published in the [annual program](programs/2026/README.md).
