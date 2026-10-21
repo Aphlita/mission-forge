@@ -47,12 +47,12 @@ Choose a project and build experience through practical contributions.
       <p><a href="projects/zephyr/README.md">Explore Zephyr →</a></p>
     </td>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/zephyr/README.md"><img src="docs/images/zephyr.png" width="100%" alt="Zephyr: a development board inspired by the community's nRF52840 DK photograph"></a>
+      <a href="projects/zephyr/README.md"><img src="images/zephyr.png" width="100%" alt="Zephyr: a development board inspired by the community's nRF52840 DK photograph"></a>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/linux/README.md"><img src="docs/images/linux.png" width="100%" alt="Illustration of a penguin beside a processor and circuit traces"></a>
+      <a href="projects/linux/README.md"><img src="images/linux.png" width="100%" alt="Illustration of a penguin beside a processor and circuit traces"></a>
     </td>
     <td width="50%" valign="middle">
       <h3><a href="projects/linux/README.md">Linux</a></h3>
@@ -69,7 +69,7 @@ Choose a project and build experience through practical contributions.
       <p><a href="projects/yocto/README.md">Explore Yocto Project →</a></p>
     </td>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/yocto/README.md"><img src="docs/images/yocto.png" width="100%" alt="Yocto Project: an embedded computer and mountains inspired by the official website"></a>
+      <a href="projects/yocto/README.md"><img src="images/yocto.png" width="100%" alt="Yocto Project: an embedded computer and mountains inspired by the official website"></a>
     </td>
   </tr>
 </table>

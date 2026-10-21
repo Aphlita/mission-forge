@@ -43,12 +43,12 @@ MFCP 由<strong>进程使命（Process Mission）</strong>发起，通过开源�
       <p><a href="projects/zephyr/README.md">探索 Zephyr →</a></p>
     </td>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/zephyr/README.md"><img src="docs/images/zephyr.png" width="100%" alt="Zephyr：参考社区 nRF52840 DK 照片绘制的开发板插图"></a>
+      <a href="projects/zephyr/README.md"><img src="images/zephyr.png" width="100%" alt="Zephyr：参考社区 nRF52840 DK 照片绘制的开发板插图"></a>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/linux/README.md"><img src="docs/images/linux.png" width="100%" alt="企鹅、处理器与电路走线插图"></a>
+      <a href="projects/linux/README.md"><img src="images/linux.png" width="100%" alt="企鹅、处理器与电路走线插图"></a>
     </td>
     <td width="50%" valign="middle">
       <h3><a href="projects/linux/README.md">Linux</a></h3>
@@ -65,7 +65,7 @@ MFCP 由<strong>进程使命（Process Mission）</strong>发起，通过开源�
       <p><a href="projects/yocto/README.md">探索 Yocto Project →</a></p>
     </td>
     <td width="50%" align="center" valign="middle">
-      <a href="projects/yocto/README.md"><img src="docs/images/yocto.png" width="100%" alt="Yocto Project：参考官网蓝色山峦横幅绘制的嵌入式设备插图"></a>
+      <a href="projects/yocto/README.md"><img src="images/yocto.png" width="100%" alt="Yocto Project：参考官网蓝色山峦横幅绘制的嵌入式设备插图"></a>
     </td>
   </tr>
 </table>
