@@ -21,6 +21,27 @@ body:
         - Yocto Project
     validations:
       required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Suggested difficulty / 建议难度
+      description: See docs/levels.md. A mentor confirms difficulty before a maintainer applies the label / 参阅 docs/levels.md，由导师确认后维护者设置标签
+      options:
+        - Pending mentor assessment / 待导师评定
+        - L0 - Guided setup and validation / 按指引准备环境与验证
+        - L1 - Scoped changes with guidance / 指导下完成局部修改
+        - L2 - Independent implementation / 独立分析、实现与验证
+        - L3 - Cross-module design / 跨模块方案设计与验证
+        - L4 - Subsystem design / 子系统设计与长期兼容性
+    validations:
+      required: true
+  - type: textarea
+    id: difficulty-rationale
+    attributes:
+      label: Difficulty rationale / 难度依据
+      description: Explain uncertainty, affected scope, validation and collaboration needs; if pending, describe what needs assessment / 说明问题不确定性、涉及范围、验证与协作要求；待评定时说明需要导师判断的内容
+    validations:
+      required: true
   - type: textarea
     id: background
     attributes:
