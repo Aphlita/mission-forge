@@ -10,11 +10,11 @@ reviews and merges the registration. PR discussions remain open during registrat
 
 1. Fork `processmission/mission-forge`，在自己的 Fork 中创建分支。
 2. 使用 `gh api user --jq '{github_id: .id, github_login: .login}'` 获取本人身份信息，也可以访问 `https://api.github.com/users/你的用户名` 查看数字 `id` 和 `login`。
-3. 将返回的真实数字 ID 和用户名写入 `participants/<数字ID>.json`。文件只包含 `github_id`（数字）与 `github_login`（字符串）两个字段。
+3. 将返回的真实数字 ID 和用户名写入 `participants/<GitHub用户名>.json`，文件名中的用户名统一使用小写，例如 `participants/zevorn.json`。文件只包含 `github_id`（数字）与 `github_login`（字符串）两个字段。
 4. 提交该文件，将分支推送到自己的 Fork，再向本仓库 `main` 创建 PR。注册 PR 只新增本人身份文件。
 5. 在 PR 中处理检查结果和维护者意见。维护者审核合并后，登记生效。
 
-数字 ID 用于识别账号，用户名用于阅读。账号更名后数字 ID 保持登记关联；参与者可以通过只修改本人身份文件的 PR 更新显示用户名。本人身份文件中的信息均公开可见。
+用户名用于查找登记文件，数字 ID 用于核对账号身份。账号更名后，通过 PR 将本人文件改为新用户名，并更新 `github_login`，保持 `github_id` 不变；PR 合并后恢复 Issue 参与资格。检查会核对原文件属于同一数字 ID，防止修改他人的登记。本人身份文件中的信息均公开可见。
 
 Registration is a prerequisite for participation. Contributor levels are assessed
 through task outcomes. Registration alone grants no contributor level or repository write access.
