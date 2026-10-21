@@ -1,31 +1,109 @@
-# Mission Forge Contributor Program（MFCP）
+<div align="center">
 
-**进程使命开源贡献者成长计划**
+<p><sub>PROCESS MISSION · OPEN SOURCE</sub></p>
+<h1>Mission Forge Contributor Program（MFCP）</h1>
+<p>
+  <strong>Learn · Build · Contribute · Grow</strong><br>
+  Develop engineering skills through real open-source contributions.
+</p>
 
-MFCP 由进程使命（Process Mission）发起，通过开源学习、导师指导、真实项目实践和贡献评估，帮助参与者积累工程经验。
+<p>
+  <a href="projects/zephyr/README.md"><img src="https://img.shields.io/badge/Zephyr-7A51C2?style=flat-square" alt="Explore Zephyr"></a>
+  <a href="projects/linux/README.md"><img src="https://img.shields.io/badge/Linux-315879?style=flat-square&amp;logo=linux&amp;logoColor=white" alt="Explore Linux"></a>
+  <a href="projects/yocto/README.md"><img src="https://img.shields.io/badge/Yocto-168681?style=flat-square" alt="Explore Yocto"></a>
+  <a href="programs/2026/README.md"><img src="https://img.shields.io/badge/Program-2026-d29922?style=flat-square" alt="Program 2026"></a>
+</p>
 
-本仓库管理参与规则、项目方向、培养安排和贡献记录。代码贡献提交到对应项目的上游仓库。
+<p><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
+<p>
+  <a href="docs/program.md">Get started</a> ·
+  <a href="projects/README.md">Explore projects</a> ·
+  <a href="programs/2026/README.md">Program 2026</a> ·
+  <a href="CONTRIBUTING.md">Contribute</a>
+</p>
 
-## 参与入口
+</div>
 
-1. 阅读[参与规则](docs/program.md)和[贡献指南](CONTRIBUTING.md)。
-2. 从 [Zephyr](projects/zephyr/README.md)、[Linux](projects/linux/README.md)、[Yocto](projects/yocto/README.md) 中选择实践方向。
-3. 查看[当期培养安排](programs/2026/README.md)，通过本仓库 Issue 提出任务或申请参与已发布任务。
-4. 与导师确认任务范围和验收条件，完成实践并提交验证记录及上游贡献链接。
+---
 
-## 仓库内容
+MFCP is a contributor development program initiated by **Process Mission**.
+It brings together open-source learning, mentorship, practical project work,
+and contribution assessments to help participants build engineering experience.
 
-| 目录 | 内容 |
+This repository hosts participation guidelines, project resources, program
+records, and contribution tracking. Code contributions go to the corresponding
+upstream projects. Supporting guides are currently available in Chinese.
+
+## Explore the projects
+
+Choose a project and build experience through practical contributions.
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="middle">
+      <h3><a href="projects/zephyr/README.md">Zephyr</a></h3>
+      <p><strong>Build for the real-time world.</strong></p>
+      <p>Explore board support, drivers, and samples. Validate behavior on embedded platforms and improve tests and documentation.</p>
+      <p><a href="projects/zephyr/README.md">Explore Zephyr →</a></p>
+    </td>
+    <td width="50%" align="center" valign="middle">
+      <a href="projects/zephyr/README.md"><img src="docs/images/zephyr.png" width="100%" alt="Zephyr: a development board inspired by the community's nRF52840 DK photograph"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="middle">
+      <a href="projects/linux/README.md"><img src="docs/images/linux.png" width="100%" alt="Illustration of a penguin beside a processor and circuit traces"></a>
+    </td>
+    <td width="50%" valign="middle">
+      <h3><a href="projects/linux/README.md">Linux</a></h3>
+      <p><strong>Understand the kernel through practice.</strong></p>
+      <p>Investigate issues, work on drivers, and contribute tests and documentation through the kernel community's review process.</p>
+      <p><a href="projects/linux/README.md">Explore Linux →</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="middle">
+      <h3><a href="projects/yocto/README.md">Yocto Project</a></h3>
+      <p><strong>Build an embedded Linux system.</strong></p>
+      <p>Work with recipes and layers, assemble images, and validate builds for a target platform.</p>
+      <p><a href="projects/yocto/README.md">Explore Yocto Project →</a></p>
+    </td>
+    <td width="50%" align="center" valign="middle">
+      <a href="projects/yocto/README.md"><img src="docs/images/yocto.png" width="100%" alt="Yocto Project: an embedded computer and mountains inspired by the official website"></a>
+    </td>
+  </tr>
+</table>
+
+## Start contributing
+
+1. **Understand the program.** Read the [participation guidelines](docs/program.md)
+   and [contribution guide](CONTRIBUTING.md).
+2. **Choose a project.** Explore the project guides and review the
+   [Program 2026](programs/2026/README.md).
+3. **Agree on a task.** Propose a task or request to join a published task through
+   a repository Issue. Confirm its scope and acceptance criteria with a mentor.
+4. **Build and share evidence.** Complete the work, record actual validation
+   results, and link upstream submissions for review and assessment.
+
+**2026 status:** Recruitment has yet to be announced. Dates, mentors, available
+tasks, and incentives will be published in the [annual program](programs/2026/README.md).
+
+## Grow through practice
+
+| Area | What you will find |
 | --- | --- |
-| [docs/](docs/program.md) | 参与规则、贡献者等级、评估标准、激励规则和导师职责 |
-| [projects/](projects/README.md) | Zephyr、Linux、Yocto 的实践方向与项目入口 |
-| [programs/](programs/README.md) | 按年份保存培养安排、阶段评估和成果记录 |
+| [Contributor levels](docs/levels.md) | L0–L4 capability descriptions and evidence for progression |
+| [Assessments](docs/assessment.md) | Criteria for engineering quality, validation, collaboration, and impact |
+| [Mentorship](docs/mentorship.md) | Mentor and participant responsibilities, communication, and coordination |
+| [Stipends and rewards](docs/stipends.md) | Requirements for announcing incentives and payment conditions |
 
-## 培养机制
+## Find your way around
 
-- [贡献者等级](docs/levels.md)
-- [贡献评估](docs/assessment.md)
-- [津贴与奖励](docs/stipends.md)
-- [导师指导](docs/mentorship.md)
+| Directory | Contents |
+| --- | --- |
+| [`docs/`](docs/program.md) | Participation, levels, assessments, incentives, and mentorship |
+| [`projects/`](projects/README.md) | Long-term learning resources and practical guidance for each project |
+| [`programs/`](programs/README.md) | Annual program announcements, assessments, and contribution records |
 
-目录组织参考 [CNCF Mentoring](https://github.com/cncf/mentoring)，在主仓库内维护培养机制与历年记录。
+The repository organization draws on [CNCF Mentoring](https://github.com/cncf/mentoring),
+keeping program guidance and historical records together in one repository.
