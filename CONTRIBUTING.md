@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 贡献指南
 
 ## 提出任务

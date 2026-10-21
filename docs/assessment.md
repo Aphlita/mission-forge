@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 贡献评估
 
 评估依据任务开始时确认的目标与验收条件，并结合实际贡献、验证证据和协作记录。

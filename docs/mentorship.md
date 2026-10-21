@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 导师指导
 
 ## 导师职责

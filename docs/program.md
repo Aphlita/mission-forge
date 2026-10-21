@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 参与规则
 
 Mission Forge Contributor Program（MFCP）面向希望参与真实开源项目的学习者与开发者，实践方向包括 Zephyr、Linux 和 Yocto。

@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 任务评论模板
 
 在原任务 Issue 中复制对应模板填写。申领流程与确认模板见[贡献指南](../CONTRIBUTING.md#申领任务)。填写实际成果和验证证据，不适用的条目说明原因。

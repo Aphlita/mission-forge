@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 贡献者等级
 
 等级用于描述参与者已经展示的工程能力，作为任务选择与培养目标的依据。

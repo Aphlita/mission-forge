@@ -1,4 +1,6 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission
+# SPDX-License-Identifier: MIT
 name: mfcp-create-issue
 description: 为 processmission/mission-forge 创建或起草 GitHub Issue，严格使用仓库当前的实践任务、问题报告、改进建议或参与求助表单。用户要求向 MFCP 发布任务、报告问题或提出建议时使用。
 ---

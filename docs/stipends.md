@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 Process Mission -->
+<!-- SPDX-License-Identifier: MIT -->
+
 # 津贴与奖励
 
 每期培养公告分别说明适用的实习薪酬、培养津贴和贡献奖励，以及各自的申请条件与发放安排。
