@@ -1,0 +1,50 @@
+name: Improvement proposal / 改进建议
+description: Improve learning resources or program processes / 改进学习资料或培养流程
+title: "[Improvement] "
+labels: ["kind/improvement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. Use the task proposal form for a new practice task.
+        请先搜索已有 Issue。新的实践任务请使用任务提议表单。
+        This issue is public. Keep private contacts, compensation agreements and credentials in private channels.
+        此 Issue 公开可见。个人联系方式、薪酬协议和访问凭据通过合适的私有渠道处理。
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / 改进范围
+      options:
+        - Learning resources / 学习资料
+        - Program rules / 培养规则
+        - Task workflow / 任务流程
+        - Mentorship / 导师指导
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 当前需求
+      description: Who is affected, what they need and links to related resources / 说明受影响的人、具体需求与相关资料
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change / 建议修改
+      description: Describe the desired behavior / 说明希望实现的具体行为
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance / 完成条件
+      description: How to verify the need has been met / 如何确认需求得到满足
+    validations:
+      required: true
+  - type: textarea
+    id: participation
+    attributes:
+      label: Participation / 参与意愿
+      description: Describe any help you can provide / 说明可以提供的协助

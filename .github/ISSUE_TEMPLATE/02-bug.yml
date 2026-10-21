@@ -1,0 +1,54 @@
+name: Bug report / 问题报告
+description: Report a problem in MFCP resources or processes / 报告 MFCP 资料或流程问题
+title: "[Bug] "
+labels: ["kind/bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. Report upstream code defects through the upstream project's process and link that report here when relevant.
+        请先搜索已有 Issue。上游代码问题按上游社区流程报告，相关记录可在此关联。
+        This issue is public. Keep private contacts, compensation agreements and credentials in private channels; redact logs before sharing.
+        此 Issue 公开可见。个人联系方式、薪酬协议和访问凭据通过私有渠道处理；分享日志前检查敏感信息。
+  - type: input
+    id: resource
+    attributes:
+      label: Affected resource / 受影响资料
+      description: Link the MFCP document, example or task / 提供 MFCP 文档、示例或任务链接
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 使用环境
+      description: Versions, hardware and tools; for documentation, identify the file and section / 版本、设备与工具；文档问题注明文件及位置
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / 实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / 证据
+      description: Logs or screenshots with private information removed / 已检查敏感信息的日志或截图
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream issue / 上游问题
+      description: Link an existing upstream report if applicable / 如适用，关联已有上游报告

@@ -1,0 +1,44 @@
+name: Question / 参与求助
+description: Ask about participation or technical guidance / 询问参与流程或技术指导
+title: "[Question] "
+labels: ["kind/question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. For a question about an existing task, comment on that task to preserve context.
+        请先搜索已有 Issue。已有任务中的具体问题请在原任务评论中讨论。
+        This issue is public. Keep private contacts, compensation agreements and credentials in private channels.
+        此 Issue 公开可见。个人联系方式、薪酬协议和访问凭据通过合适的私有渠道处理。
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic / 求助主题
+      options:
+        - Participation / 参与流程
+        - Environment setup / 环境准备
+        - Task understanding / 任务理解
+        - Upstream contributions / 上游贡献
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / 相关上下文
+      description: Link the related project, task or document / 关联项目、任务或文档
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 具体问题
+    validations:
+      required: true
+  - type: textarea
+    id: attempts
+    attributes:
+      label: Attempts / 已尝试的操作
+      description: Resources read, commands run and actual results / 阅读的资料、执行的命令与实际结果
+    validations:
+      required: true

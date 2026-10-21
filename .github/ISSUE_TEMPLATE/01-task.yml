@@ -1,0 +1,68 @@
+name: Task proposal / 实践任务提议
+description: Propose an open-source practice task / 提出开源实践任务
+title: "[Task] "
+labels: ["kind/task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. To claim a published task, comment on that task.
+        请先搜索已有 Issue。申领已发布任务时，请在原任务下发表评论。
+        This issue is public. Keep private contacts, compensation agreements and credentials in private channels.
+        此 Issue 公开可见。个人联系方式、薪酬协议和访问凭据通过合适的私有渠道处理。
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project / 实践项目
+      multiple: true
+      options:
+        - Zephyr
+        - Linux
+        - Yocto Project
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: Background / 问题背景
+      description: Describe the real problem and link upstream issues or discussions / 说明实际问题并关联上游 Issue 或讨论
+    validations:
+      required: true
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals and deliverables / 目标与交付内容
+      description: Define expected behavior, scope and outputs / 说明预期行为、涉及范围和交付内容
+    validations:
+      required: true
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites / 实践条件
+      description: Knowledge, hardware, environment and upstream versions / 知识要求、设备、开发环境与上游版本
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria / 验收条件
+      description: Steps, expected results and required evidence / 操作步骤、预期结果和验证证据
+    validations:
+      required: true
+  - type: input
+    id: mentor
+    attributes:
+      label: Mentor / 导师
+      description: GitHub username; if unconfirmed, describe the guidance needed / 填写 GitHub 用户名；待协调时说明需要的指导
+    validations:
+      required: true
+  - type: textarea
+    id: schedule
+    attributes:
+      label: Schedule / 时间安排
+      description: Availability, dependencies and program period if known / 预计参与时间、依赖条件和已知期次
+  - type: textarea
+    id: references
+    attributes:
+      label: References / 参考资料
+      description: Documentation and source links / 文档与源码链接
