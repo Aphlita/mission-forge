@@ -10,14 +10,37 @@ export function participantPath(login) {
   return `participants/${login.toLowerCase()}.json`;
 }
 
-export function validateRegistration(record, author, filename) {
+export function validateRegistrationFormat(record, filename) {
   if (!record || Array.isArray(record) || typeof record !== 'object' ||
       Object.keys(record).sort().join(',') !== 'github_id,github_login') {
-    throw new Error('Registration must contain only github_id and github_login.');
+    throw new Error(`${filename}: registration must contain only github_id and github_login.`);
   }
-  if (!Number.isSafeInteger(record.github_id) || record.github_id <= 0 ||
-      typeof record.github_login !== 'string' ||
-      record.github_id !== author.id ||
+  if (!Number.isSafeInteger(record.github_id) || record.github_id <= 0) {
+    throw new Error(`${filename}: github_id must be a positive safe integer.`);
+  }
+  if (typeof record.github_login !== 'string' ||
+      !/^[a-z0-9](?:[a-z0-9]|-(?=[a-z0-9])){0,38}$/i.test(record.github_login)) {
+    throw new Error(`${filename}: github_login must be a valid GitHub username.`);
+  }
+  if (filename !== participantPath(record.github_login)) {
+    throw new Error(`${filename}: filename must use the lowercase github_login.`);
+  }
+  return record;
+}
+
+export function parseRegistration(content, filename) {
+  let record;
+  try {
+    record = JSON.parse(content);
+  } catch {
+    throw new Error(`${filename}: invalid JSON syntax.`);
+  }
+  return validateRegistrationFormat(record, filename);
+}
+
+export function validateRegistration(record, author, filename) {
+  validateRegistrationFormat(record, filename);
+  if (record.github_id !== author.id ||
       record.github_login.toLowerCase() !== author.login.toLowerCase() ||
       filename !== participantPath(author.login) || author.type !== 'User') {
     throw new Error('Registration must match the PR author and lowercase username filename.');
@@ -74,6 +97,26 @@ export function createClient(token, repository = 'processmission/mission-forge')
   return {request, list, registered, root};
 }
 
+async function registrationBlob(client, file) {
+  const blob = await client.request(`${client.root}/git/blobs/${file.sha}`);
+  if (blob.encoding !== 'base64' || blob.size > 4096) {
+    throw new Error(`${file.filename}: registration must be a JSON file no larger than 4096 bytes.`);
+  }
+  return parseRegistration(Buffer.from(blob.content, 'base64').toString('utf8'), file.filename);
+}
+
+export async function validatePullRequestJson(client, number) {
+  const pr = await client.request(`${client.root}/pulls/${number}`);
+  const files = await client.list(`${client.root}/pulls/${number}/files`);
+  if (files.length !== pr.changed_files) throw new Error('Incomplete PR file list.');
+  const registrations = files.filter(file => file.filename.startsWith('participants/') &&
+    file.filename !== 'participants/README.md' && file.status !== 'removed');
+  for (const file of registrations) {
+    await registrationBlob(client, file);
+  }
+  return `JSON syntax, fields and filenames verified for ${registrations.length} participant files.`;
+}
+
 export async function validatePullRequest(client, number) {
   const pr = await client.request(`${client.root}/pulls/${number}`);
   const repo = await client.request(client.root);
@@ -110,9 +153,7 @@ export async function validatePullRequest(client, number) {
     const oldRecord = JSON.parse(Buffer.from(oldFile.content, 'base64').toString('utf8'));
     if (oldRecord.github_id !== pr.user.id) throw new Error('Cannot rename another participant’s registration.');
   }
-  const blob = await client.request(`${client.root}/git/blobs/${target.sha}`);
-  if (blob.encoding !== 'base64' || blob.size > 4096) throw new Error('Invalid registration content.');
-  const record = JSON.parse(Buffer.from(blob.content, 'base64').toString('utf8'));
+  const record = await registrationBlob(client, target);
   validateRegistration(record, pr.user, target.filename);
   const user = await client.request(`users/${encodeURIComponent(record.github_login)}`);
   validateRegistration(record, user, target.filename);
@@ -155,8 +196,15 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const client = createClient(process.env.GITHUB_TOKEN, process.env.GITHUB_REPOSITORY);
   const event = JSON.parse(await readFile(process.env.GITHUB_EVENT_PATH, 'utf8'));
   if (event.repository?.full_name !== 'processmission/mission-forge') throw new Error('Unexpected event repository.');
-  const result = process.argv[2] === 'registration'
-    ? await validatePullRequest(client, event.pull_request.number)
-    : await moderate(client, event, process.env.GITHUB_EVENT_NAME);
+  let result;
+  if (process.argv[2] === 'registration-json') {
+    result = await validatePullRequestJson(client, event.pull_request.number);
+  } else if (process.argv[2] === 'registration') {
+    result = await validatePullRequest(client, event.pull_request.number);
+  } else if (process.argv[2] === 'moderate') {
+    result = await moderate(client, event, process.env.GITHUB_EVENT_NAME);
+  } else {
+    throw new Error('Choose registration-json, registration or moderate.');
+  }
   console.log(result);
 }
